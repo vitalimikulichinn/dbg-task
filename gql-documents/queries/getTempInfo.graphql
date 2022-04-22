@@ -1,0 +1,13 @@
+query GetTempInfo($name: String!, $config: ConfigInput) {
+  getCityByName(name: $name, config: $config) {
+    id
+    name
+    country
+    weather {
+      temperature {
+        actual
+        feelsLike
+      }
+    }
+  }
+}

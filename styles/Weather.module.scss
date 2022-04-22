@@ -1,0 +1,110 @@
+@import "./shared.scss";
+
+.searchContainer {
+  padding: 24px;
+  border-bottom: 2px solid $borderColor;
+  display: flex;
+  width: 100%;
+
+  @media (max-width: 727px) {
+    padding: 24px 20px;
+  }
+}
+
+.inputWrapper {
+  flex-grow: 1;
+  margin-right: 24px;
+  >input {
+    height: 48px;
+    padding: 0 24px;
+  }
+}
+
+.weatherWrapper {
+  padding: 24px;
+  height: 599px;
+}
+
+.weatherContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border-radius: 20px;
+  p {
+    color: $white;
+  }
+  transition: .3s ease;
+  height: 100%;
+  opacity: 0;
+}
+
+.coldPhone {
+  background-image: radial-gradient(94.46% 344.2% at 9.65% 19.42%, #6088EB 2.27%, #54ADE4 18.88%, #7EB6FF 65.81%, #5D90E9 85.93%, #3862B5 97.61%);
+  opacity: 1;
+  transition: opacity .3s ease;
+}
+
+.hotPhone {
+  background: radial-gradient(94.46% 344.2% at 9.65% 19.42%, #F6CF4F 2.27%, #F1AFDE 18.88%, #E05E60 65.81%, #F99853 85.93%, #E4675E 97.61%);
+  opacity: 1;
+  transition: opacity .3s ease;
+}
+
+.normalPhone {
+  background-image: radial-gradient(94.46% 344.2% at 9.65% 19.42%, #F2EA24 2.27%, #6ECE4C 38.87%, #7BF176 65.81%, #AEEB61 87.05%, #F2EC4F 97.61%);
+  opacity: 1;
+  transition: opacity .3s ease;
+}
+
+.location {
+  @include boldFont();
+  font-size: 24px;
+  margin-top: 42px;
+  margin-bottom: 8px;
+}
+
+.date {
+  @include mediumFont();
+  font-size: 14px;
+}
+
+.smallScreenButton {
+  padding: 12px;
+}
+
+.iconContainer {
+  margin-top: 97px;
+  margin-bottom: 24px;
+}
+
+.temperature {
+  @include regularFont();
+  font-size: 40px;
+  line-height: 49px;
+}
+
+.current {
+  @include mediumFont();
+  font-size: 14px;
+  line-height: 17px;
+  letter-spacing: 0.085em;
+  text-transform: uppercase;
+  margin: 12px 0;
+}
+
+.feelsTemperature {
+  @include regularFont();
+  font-size: 14px;
+  line-height: 17px;
+
+  >span {
+    @include mediumFont();
+  }
+}
+
+.error {
+  opacity: 1;
+  p {
+    color: $main;
+  }
+}

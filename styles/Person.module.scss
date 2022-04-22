@@ -1,0 +1,166 @@
+@import "./shared.scss";
+
+.personContainer {
+  padding: 42px;
+  min-height: 418px;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+
+  @media (max-width: 768px) {
+    padding: 20px;
+  }
+}
+
+.personWrapper {
+  display: flex;
+
+  @media (max-width: 767px) {
+    flex-direction: column;
+  }
+}
+
+.buttonContainer {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 24px;
+}
+
+.personCard {
+  @include card();
+  padding: 16px;
+  width: 30%;
+  min-height: 262px;
+
+  @media (max-width: 767px) {
+    width: 100%;
+  }
+}
+
+.header {
+  position: relative;
+  text-align: center;
+  @include mediumFont();
+  font-size: 14px;
+  height: 32px;
+  line-height: 32px;
+  width: 100%;
+  letter-spacing: 0.085em;
+  color: $grey;
+
+  >button {
+    position: absolute;
+    right: 0;
+    top: 0;
+  }
+}
+
+.personInfo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  >p {
+    @include boldFont();
+    font-size: 24px;
+    margin-top: 33px;
+    margin-bottom: 24px;
+  }
+
+  p {
+    text-align: center;
+  }
+}
+
+.infoRow {
+  display: flex;
+  margin-bottom: 12px;
+  >div {
+    width: 16px;
+    height: 16px;
+    margin-right: 4px;
+  }
+
+  >p {
+    @include regularFont();
+    >span:first-child {
+      color: $orange;
+    }
+  }
+  &:last-child {
+    margin-bottom: 0;
+  }
+}
+
+.fullInfoRow {
+  margin-bottom: 16px;
+}
+
+.activeText {
+  color: #4651D2;
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+.personFullInfoContainer {
+  @include card();
+  padding: 0 16px 27px;
+  min-height: 262px;
+  width: 67%;
+  margin-left: 30px;
+
+  @media (max-width: 767px) {
+    width: 100%;
+    margin-left: 0;
+    margin-top: 20px;
+  }
+}
+
+.tabBar {
+  display: flex;
+  border-bottom: 2px solid #F7F6F9;
+  width: 100%;
+  box-sizing: border-box;
+  height: 44px;
+  margin-bottom: 24px;
+}
+
+.bar {
+  height: 44px;
+  @include mediumFont();
+  color: $grey;
+  font-size: 16px;
+  display: flex;
+  align-items: center;
+  margin-right: 32px;
+  cursor: pointer;
+  border-bottom: 2px solid transparent;
+  box-sizing: border-box;
+  &_active {
+    color: $blue;
+    border-color: $blue;
+  }
+}
+
+.checkboxContainer {
+  margin-bottom: 16px;
+}
+
+.confirmButton {
+  width: 100%;
+}
+
+.editProfile {
+  width: 350px;
+  height: 603px;
+  padding: 24px;
+  background-color: #ffffff;
+  border-radius: 20px;
+
+  >p {
+    text-align: center;
+    @include boldFont();
+    font-size: 24px;
+    line-height: 30px;
+  }
+}

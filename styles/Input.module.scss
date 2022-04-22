@@ -1,0 +1,23 @@
+@import "./shared.scss";
+
+.label {
+  @include regularFont();
+  color: $orange;
+}
+
+.input {
+  border: 1px solid #DFDFDF;
+  background-color: #F7F6F9;
+  height: 44px;
+  border-radius: 7px;
+  width: 100%;
+  @include regularFont();
+  color: $main;
+  font-size: 14px;
+  padding: 0 16px;
+}
+
+.margin {
+  margin-top: 4px;
+  margin-bottom: 12px;
+}

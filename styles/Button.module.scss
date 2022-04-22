@@ -1,0 +1,46 @@
+@mixin button {
+  border: none;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 20px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 7px;
+  
+  &:disabled {
+    opacity: .5;
+    cursor: default;
+  }
+
+  &:hover {
+    transition: .3s;
+  }
+
+  >svg {
+    margin-right: 4px;
+  }
+}
+
+.buttonPrimary {
+  @include button;
+  color: #4651D2;
+  background-color: transparent;
+}
+
+.buttonFilled {
+  @include button;
+  color: #FFFFFF;
+  background-color: #4651D2;
+  padding: 12px 34px;
+}
+
+.buttonPrimary:active, .buttonFilled:active {
+  transition: .1s;
+  opacity: 0.5;
+}

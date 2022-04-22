@@ -1,0 +1,32 @@
+
+$main: #090E46;
+$blue: #4651D2;
+$grey: #ADAFB6;
+$orange: #F69D5B;
+$white: #FFFFFF;
+$borderColor: #F7F6F9;;
+
+@mixin card() {
+  border-radius: 20px;
+  background-color: $white;
+  box-shadow: 0px 15px 20px 0px #0000000D;
+}
+
+@mixin mediumFont() {
+  font-weight: 500;
+  line-height: 20px;
+  font-style: normal;
+}
+
+@mixin regularFont() {
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 17px;
+  font-style: normal;
+}
+
+@mixin boldFont() {
+  font-weight: 600;
+  color: #090E46;
+  font-style: normal;
+}

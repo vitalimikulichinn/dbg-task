@@ -1,0 +1,37 @@
+@import "./shared.scss";
+
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #090E467D;
+  backdrop-filter: blur(7px);
+  z-index: 1000;
+}
+
+.modalWindow {
+  width: none;
+  height: none;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  box-sizing: border-box;
+  border: 1px solid transparent;
+}
+
+.modalContainer {
+  position: relative;
+}
+
+.closeButton {
+  position: absolute;
+  top: -37px;
+  right: -4px;
+  cursor: pointer;
+}
