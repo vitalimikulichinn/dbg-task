@@ -1,8 +1,8 @@
 import React from "react";
 import styles from "../../../styles/Person.module.scss";
-import { Button } from "../shared/button/button.component";
 import { EditIcon } from "../../icons/editIcon";
-import { InfoRow } from "../shared/info-row/info-row.component";
+import { Button } from "../../shared/button/button.component";
+import { InfoRow } from "../../shared/info-row/info-row.component";
 
 interface PersonCardProps {
   login: string;

@@ -1,7 +1,7 @@
 import { SETTINGS_CONFIG } from "../../constants";
-import { Checkbox } from "../shared/checkbox/checkbox.component";
-import { InfoRow } from "../shared/info-row/info-row.component";
 import styles from "../../../styles/Person.module.scss";
+import { InfoRow } from "../../shared/info-row/info-row.component";
+import { Checkbox } from "../../shared/checkbox/checkbox.component";
 
 interface IPersonInfo {
   label: string;

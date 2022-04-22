@@ -1,11 +1,11 @@
 import React, { useCallback, useMemo, useReducer } from "react";
 import styles from "../../../styles/Person.module.scss";
 import { User } from "../../hooks/useGetUser";
-import { Button } from "../shared/button/button.component";
-import { InputForm } from "../shared/input/form-input.component";
 import { INPUTS_CONFIG } from "../../constants";
 import { FormState, reducer } from "./edit-profile.helper";
 import { dobFormat } from "../person-info/person-info.helper";
+import { InputForm } from "../../shared/input/form-input.component";
+import { Button } from "../../shared/button/button.component";
 
 interface EditProfileProps {
   user?: User;

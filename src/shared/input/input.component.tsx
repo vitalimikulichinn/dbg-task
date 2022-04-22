@@ -1,5 +1,5 @@
 import React, { useCallback } from "react";
-import styles from "../../../../styles/Input.module.scss";
+import styles from "../../../styles/Input.module.scss";
 
 interface InputProps {
   value: string;

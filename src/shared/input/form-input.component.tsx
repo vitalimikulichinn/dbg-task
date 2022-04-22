@@ -1,6 +1,6 @@
 import React from "react";
-import styles from "../../../../styles/Input.module.scss";
-import { Action, Actions } from "../../edit-profile/edit-profile.helper";
+import styles from "../../../styles/Input.module.scss";
+import { Action, Actions } from "../../components/edit-profile/edit-profile.helper";
 
 interface InputProps {
   name: string;

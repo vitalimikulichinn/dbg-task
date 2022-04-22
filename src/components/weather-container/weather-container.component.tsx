@@ -9,10 +9,11 @@ interface WeatherContainerProps {
   data?: ITempInfo | null;
   loading: boolean;
   error?: ApolloError;
+  isRendered: boolean;
 }
 
 export const WeatherContainer: React.FC<WeatherContainerProps> = React.memo(
-  ({ data, loading, error }) => {
+  ({ data, loading, error, isRendered }) => {
     const date = new Date();
     const regionNamesInEnglish = new Intl.DisplayNames(["en"], {
       type: "region",
@@ -21,7 +22,9 @@ export const WeatherContainer: React.FC<WeatherContainerProps> = React.memo(
     return (
       <div className={styles.weatherWrapper}>
         <div
-          className={`${styles.weatherContainer} ${error ? styles.error : ""} ${
+          className={`${styles.weatherContainer} ${
+            error || (isRendered && !loading && !data) ? styles.error : ""
+          } ${
             data?.weather?.temperature?.actual
               ? weatherBackground(data?.weather?.temperature?.actual)
               : ""
@@ -58,6 +61,12 @@ export const WeatherContainer: React.FC<WeatherContainerProps> = React.memo(
                       °C
                     </span>
                   </p>
+                </>
+              )}
+              {!data && isRendered && (
+                <>
+                  <p className={styles.temperature}>Not found</p>
+                  <p className={styles.current}>Type another city</p>
                 </>
               )}
               {error && (

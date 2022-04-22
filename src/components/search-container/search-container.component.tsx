@@ -2,8 +2,8 @@ import React, { useCallback, useState } from "react";
 import styles from "../../../styles/Weather.module.scss";
 import { useIsMobile } from "../../hooks/useIsMobile";
 import { SearchIcon } from "../../icons/searchIcon";
-import { Button } from "../shared/button/button.component";
-import { Input } from "../shared/input/input.component";
+import { Button } from "../../shared/button/button.component";
+import { Input } from "../../shared/input/input.component";
 
 interface SearchContainerProps {
   search: (value: string) => void;

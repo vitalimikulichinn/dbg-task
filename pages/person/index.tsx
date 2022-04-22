@@ -1,20 +1,20 @@
 import React, { useCallback, useEffect, useState } from "react";
-import { Button } from "../../src/components/shared/button/button.component";
-import { Loader } from "../../src/components/loader/loader.component";
-import { MainContainer } from "../../src/components/shared/main-container/main-container.component";
 import { PersonCard } from "../../src/components/person-card/person-card.component";
 import { getUser, useGetUser, User } from "../../src/hooks/useGetUser";
 import { RefreshIcon } from "../../src/icons/refreshIcon";
 import styles from "../../styles/Person.module.scss";
 import { PersonInfo } from "../../src/components/person-info/person-info.component";
-import { ModalContainer } from "../../src/components/shared/modal/modal-container.component";
-import { Modal } from "../../src/components/shared/modal/modal";
 import { useModal } from "../../src/hooks/useModal";
 import { EditProfileModal } from "../../src/components/edit-profile/edit-profile.component";
 import { FormState } from "../../src/components/edit-profile/edit-profile.helper";
 import { localStorageFacade } from "../../src/service/localStorageService";
 import { GetStaticProps } from "next";
 import { getUserFromStorage, setUserToLocalStorage } from "../../src/utils/person.helper";
+import { MainContainer } from "../../src/shared/main-container/main-container.component";
+import { Loader } from "../../src/components/loader/loader.component";
+import { Button } from "../../src/shared/button/button.component";
+import { Modal } from "../../src/shared/modal/modal";
+import { ModalContainer } from "../../src/shared/modal/modal-container.component";
 
 interface PersonProps {
   user: User;

@@ -1,6 +1,6 @@
 import React, { ReactElement } from "react";
 import ReactDom from "react-dom";
-import styles from "../../../../styles/Modal.module.scss";
+import styles from "../../../styles/Modal.module.scss";
 
 interface ModalProps {
   children: ReactElement;

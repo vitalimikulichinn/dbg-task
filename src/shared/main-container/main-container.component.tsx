@@ -1,6 +1,6 @@
 import React from "react";
-import styles from "../../../../styles/Home.module.scss";
-import { Header } from "../../header/header.component";
+import styles from "../../../styles/Home.module.scss";
+import { Header } from "../../components/header/header.component";
 
 interface MainContainerProps {
   children: JSX.Element;

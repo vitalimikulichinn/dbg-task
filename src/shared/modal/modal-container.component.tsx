@@ -1,6 +1,6 @@
 import React, { ReactElement, useEffect } from "react";
-import styles from "../../../../styles/Modal.module.scss";
-import { CloseIcon } from "../../../icons/closeIcon";
+import styles from "../../../styles/Modal.module.scss";
+import { CloseIcon } from "../../icons/closeIcon";
 
 interface ModalContainerProps {
   onClose: () => void;
